@@ -1,0 +1,207 @@
+@import "tailwindcss";
+@import "aos/dist/aos.css";
+
+@font-face {
+  font-family: "Greyhound-Bold";
+  src: url("assets/fonts/Greyhound-Bold.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("assets/fonts/inter-regular.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("assets/fonts/inter-bold.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter-SemiBold";
+  src: url("assets/fonts/inter-semibold.ttf");
+  font-display: swap;
+}
+
+@theme {
+  --font-greyhound-bold: "Greyhound-Bold", sans-serif;
+  --font-inter-regular: "Inter-Regular", sans-serif;
+  --font-inter-bold: "Inter-Bold", sans-serif;
+  --font-inter-semibold: "Inter-SemiBold", sans-serif;
+
+  --max-width-8xl: 1400px;
+  --color-primary-gray: #646768;
+  --color-secondary-gray: #494a4a;
+  --color-third-gray: #d1d5ce;
+  --color-fourth-gray: #7b7b7b;
+  --color-fifth-gray: #5d5d5d;
+  --color-sixth-gray: #464646;
+  --color-primary-green: #646768;
+  --color-secondary-green: #465035;
+  --color-third-green: #475136;
+  --color-fourth-green: #252f25;
+  --color-secondary-black: #282828;
+  --color-third-black: #242424;
+  --color-primary-cream: #f0e2d0;
+  --color-secondary-cream: #efe1ce;
+  --breakpoint-3xl: 120rem;
+}
+
+
+.shadow-image {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/*Menu custom*/
+
+.translate-middle {
+  transform: translate(-50%, -50%);
+}
+
+.navbar {
+  width: 100%;
+  padding: 0;
+  top: 0;
+  left: 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+}
+
+.navbar .menu-items {
+  display: flex;
+}
+
+.navbar .nav-container li {
+  list-style: none;
+}
+
+.nav-container {
+  display: block;
+  position: relative;
+  height: 60px;
+}
+
+.nav-container .checkbox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 4px;
+  left: 26px;
+  z-index: 99;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+  display: block;
+  height: 30px;
+  width: 40px;
+  position: absolute;
+  top: 25px;
+  right: 26px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.nav-container .hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.open .hamburger-lines .line {
+  background: #282828;
+}
+
+.nav-container .hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+  padding-top: 120px;
+  background-color: #ffffff;
+  height: 100vh;
+  width: 100%;
+  transform: translate(-150%);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+  position: relative;
+  z-index: 30;
+}
+
+.navbar .menu-items ul li {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.nav-container.open .menu-items {
+  transform: translateX(0);
+}
+.nav-container.open .hamburger-lines {
+  justify-content: space-between;
+}
+
+.nav-container.open .hamburger-lines .line1 {
+  transform: rotate(45deg);
+}
+
+.nav-container.open .hamburger-lines .line2 {
+  transform: scaleY(0);
+}
+
+.nav-container.open .hamburger-lines .line3 {
+  transform: rotate(-45deg);
+}
+
+.fancy-menu li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  border-radius: 0;
+  transition: all 0.5s ease-in-out;
+  background-color: #ffffff;
+}
+
+.fancy-menu li a:hover::before {
+  width: 100%;
+}
+
+.fancy-menu li a:hover {
+  color: #ffffff;
+}
+
+#desktop-menu .fancy-menu li a.activeMenu {
+  color: #ffffff;
+}
+
+.fancy-menu li a.activeMenu::before {
+  width: 100%;
+}
+
+/*Menu custom*/
