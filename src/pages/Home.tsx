@@ -11,17 +11,10 @@ export default function Home() {
   return (
     <>
       <section className="relative">
-        <img
-          src={`${domain}wp-content/uploads/2026/05/hero.webp`}
-          alt="Hero banner"
-          className="absolute h-screen w-full object-cover"
-        />
+        <video className="absolute h-screen w-full object-cover" src={`${domain}wp-content/uploads/2026/05/Video_Vorax.mp4`} autoPlay loop muted></video>
+
         <div className="h-screen w-full font-greyhound-bold text-white">
           <h1 className="hidden">Voraxathletics</h1>
-          <span className="uppercase absolute top-66 left-1/2 md:top-1/2 md:left-55 text-center md:text-3xl md:-translate-y-1/2 -translate-x-1/2 text-xl 3xl:left-90 3xl:text-4xl">
-            Available <br />
-            now
-          </span>
           <div className="flex flex-col md:items-start items-center gap-6 absolute md:bottom-15 md:right-40 bottom-10 right-1/2 translate-x-1/2 md:translate-x-0 3xl:bottom-40 3xl:right-60">
             <a
               href="#"
@@ -35,7 +28,7 @@ export default function Home() {
                 className="h-8"
               />
               <a
-                href=""
+                href="https://api.whatsapp.com/send/?phone=%2B52312556595&text&type=phone_number&app_absent=0"
                 className="">
                 (+52) 312 556 595
               </a>
@@ -168,7 +161,7 @@ export default function Home() {
           <img
             src={`${domain}wp-content/uploads/2026/05/botellas-vorax-cruzadas-lineas.webp`}
             alt="Voraxathletics botellas cruzadas"
-            className="absolute h-40 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:max-h-100 3xl:max-h-120 "
+            className="absolute max-h-40 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:max-h-100 3xl:max-h-120 "
           />
           <span className="absolute font-greyhound-bold text-sixth-gray uppercase left-[1%] top-[40%] md:left-[16%] md:top-[35%] 3xl:left-[24%] text-xs md:text-sm">
             Leak-proof lid
