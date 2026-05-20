@@ -256,7 +256,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative h-120 md:h-160 overflow-hidden" id="shop-now">
+      <section className="relative h-120 md:h-160 overflow-hidden" id="order-now">
         <img
           className="absolute h-100 md:h-160 object-cover md:right-0 z-1 3xl:right-0 -right-20 hidden md:block"
           src={`${domain}wp-content/uploads/2026/05/vorax-bottle-black-moment.webp`}

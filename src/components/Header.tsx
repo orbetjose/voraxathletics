@@ -61,7 +61,7 @@ export default function Header() {
                     <li key={index}>
                       <button
                         onClick={() => scrollToSection(namesSections)}
-                        className="font-inter-bold uppercase pb-1 relative cursor-pointer">
+                        className="font-inter-bold uppercase pb-1 relative cursor-pointer uppercase">
                         {item.name}
                       </button>
                     </li>
