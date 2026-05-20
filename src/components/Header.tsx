@@ -23,7 +23,7 @@ export default function Header() {
 
 
 
-    const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
 
     if (element) {
@@ -32,7 +32,7 @@ export default function Header() {
         block: "start",
       });
       closeMenu();
-    } 
+    }
   };
 
   return (
@@ -44,7 +44,7 @@ export default function Header() {
               href="/"
               className="flex z-50">
               <img
-                className={`h-6  logo mx-auto ${menuOpen ? "invert" : ""}`} 
+                className={`h-6  logo mx-auto ${menuOpen ? "invert" : ""}`}
                 src={`${domain}wp-content/uploads/2026/05/logo.png`}
                 alt="Logo de Voraxathletics"
               />
@@ -56,6 +56,17 @@ export default function Header() {
               className="items-center justify-center hidden text-sm 2xl:text-base md:flex gap-10 fancy-menu font-inter-bold uppercase text-white">
               {menuItems.map((item, index) => {
                 let namesSections = item.name.toLowerCase();
+                if (item.permalink === "#") {
+                  return (
+                    <li key={index}>
+                      <button
+                        onClick={() => scrollToSection(namesSections)}
+                        className="font-inter-bold uppercase pb-1 relative">
+                        {item.name}
+                      </button>
+                    </li>
+                  );
+                }
                 let relativePath = new URL(item.permalink).pathname;
                 if (relativePath.includes("wp")) {
                   relativePath = relativePath.replace("/wp", "");
@@ -88,18 +99,28 @@ export default function Header() {
                   className="items-center justify-center md:hidden text-sm  gap-4 fancy-menu uppercase font-inter-bold uppercase text-black">
                   {menuItems.map((item, index) => {
                     let namesSections = item.name.toLowerCase();
-                    let relativePath = new URL(item.permalink).pathname;
+                    if (item.permalink === "#") {
+                      return (
+                        <li key={index}>
+                          <button
+                            onClick={() => scrollToSection(namesSections)}
+                            className="font-inter-bold uppercase pb-1 relative">
+                            {item.name}
+                          </button>
+                        </li>
+                      );
+                    } let relativePath = new URL(item.permalink).pathname;
                     if (relativePath.includes("wp")) {
                       relativePath = relativePath.replace("/wp", "");
                     }
                     return (
-                                              <li key={index}>
-                          <button
-                            className={` pb-1 relative cursor-pointer`}
-                            onClick={() => scrollToSection(namesSections)}>
-                            {item.name}
-                          </button>
-                        </li>
+                      <li key={index}>
+                        <button
+                          className={` pb-1 relative cursor-pointer`}
+                          onClick={() => scrollToSection(namesSections)}>
+                          {item.name}
+                        </button>
+                      </li>
                     );
                   })}
                 </ul>
