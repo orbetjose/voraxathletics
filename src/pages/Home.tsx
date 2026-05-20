@@ -17,7 +17,7 @@ export default function Home() {
           <h1 className="hidden">Voraxathletics</h1>
           <div className="flex flex-col md:items-start items-center gap-6 absolute md:bottom-15 md:right-40 bottom-10 right-1/2 translate-x-1/2 md:translate-x-0 3xl:bottom-40 3xl:right-60">
             <a
-              href="#"
+              href="https://wa.me/message/NPBGN6T4QAEDO1"
               className="uppercase text-primary-gray px-5 py-1 bg-white rounded-full w-fit transition-colors duration-300 hover:bg-primary-gray hover:text-white">
               Buy now
             </a>
@@ -28,7 +28,7 @@ export default function Home() {
                 className="h-8"
               />
               <a
-                href="https://api.whatsapp.com/send/?phone=%2B52312556595&text&type=phone_number&app_absent=0"
+                href="https://wa.me/message/NPBGN6T4QAEDO1"
                 className="">
                 (+52) 312 556 595
               </a>
@@ -71,7 +71,7 @@ export default function Home() {
               32oz stainless steel water bottle designed to keep up with your
             </p>
             <a
-              href="#"
+              href="https://wa.me/message/NPBGN6T4QAEDO1"
               className="text-primary-green px-4 py-1 rounded-full bg-white font-greyhound-bold uppercase text-sm hover:bg-primary-green hover:text-white transition-colors duration-300"
               data-aos="fade">
               Get Yours Now
@@ -91,7 +91,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative md:h-160 py-14 md:py-0 overflow-hidden">
+      <section className="relative md:h-160 py-14 md:py-0 overflow-hidden" id="benefits">
         <img
           className="absolute left-1/2  md:h-160 md:left-10 3xl:left-60 hidden md:block"
           src={`${domain}wp-content/uploads/2026/05/logo-vorax-vertical.webp`}
@@ -256,7 +256,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative h-120 md:h-160 overflow-hidden">
+      <section className="relative h-120 md:h-160 overflow-hidden" id="shop-now">
         <img
           className="absolute h-100 md:h-160 object-cover md:right-0 z-1 3xl:right-0 -right-20 hidden md:block"
           src={`${domain}wp-content/uploads/2026/05/vorax-bottle-black-moment.webp`}
@@ -292,7 +292,7 @@ export default function Home() {
               Take your favorite drink everywhere in style and comfort.
             </p>
             <a
-              href="#"
+              href="https://wa.me/message/NPBGN6T4QAEDO1"
               className="text-primary-gray px-4 py-1 rounded-full bg-white font-greyhound-bold uppercase text-sm hover:bg-primary-gray hover:text-white transition-colors duration-300"
               data-aos="fade">
               Shop now
@@ -300,7 +300,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-12 overflow-hidden">
+      <section className="py-12 overflow-hidden" id="styles">
         <div className="max-w-6xl mx-auto ">
           <h3 className="text-center uppercase font-greyhound-bold text-third-gray md:text-2xl">
             It connects to <span className="text-third-green">your style</span>

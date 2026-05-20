@@ -10,7 +10,7 @@ export default function Footer() {
                 <a href="https://www.instagram.com/vorax.athletics?igsh=bzUyYTk0djJmNzB2"><img className="h-6" src={`${domain}wp-content/uploads/2026/05/instagram.png`} alt="Icono de Instagram"/></a>
                 <a href="https://www.tiktok.com/@vorax.athleisure?_r=1&_t=ZS-96TtCXuDgC9"><img className="h-7" src={`${domain}wp-content/uploads/2026/05/tiktok.png`} alt="Icono de TikTok"/></a>
             </div>
-            <p className="text-center text-third-black font-inter-regular pt-12">Etiam sit amet orci eget eros </p>
+            <p className="text-center text-third-black font-inter-regular pt-12">ARE YOU READY TO MAKE YOUR MOVE?</p>
         </div>
       </section>
     </footer>

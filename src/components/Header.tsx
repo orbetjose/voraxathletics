@@ -22,6 +22,35 @@ export default function Header() {
     setMenuOpen(false);
   };
 
+    useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }, 300);
+    }
+  }, [pathname]);
+
+    const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+      closeMenu();
+    } else if (pathname !== "/") {
+      router.push(`/#${sectionId}`);
+      closeMenu();
+    }
+  };
 
   return (
     <header className="w-full">
@@ -43,17 +72,7 @@ export default function Header() {
               id="desktop-menu"
               className="items-center justify-center hidden text-sm 2xl:text-base md:flex gap-10 fancy-menu font-inter-bold uppercase text-white">
               {menuItems.map((item, index) => {
-                if (item.permalink === "#") {
-                  return (
-                    <li key={index}>
-                      <a
-                        href={item.permalink}
-                        className="font-inter-bold uppercase pb-1 relative">
-                        {item.name}
-                      </a>
-                    </li>
-                  );
-                }
+                let namesSections = item.name.toLowerCase();
                 let relativePath = new URL(item.permalink).pathname;
                 if (relativePath.includes("wp")) {
                   relativePath = relativePath.replace("/wp", "");
@@ -61,15 +80,11 @@ export default function Header() {
 
                 return (
                   <li key={index}>
-                    <NavLink
-                      className={({ isActive }: { isActive: boolean }) =>
-                        `${
-                          isActive && window.location.pathname === relativePath ? "activeMenu" : ""
-                        } font-inter-bold uppercase pb-1 relative`
-                      }
-                      to={relativePath}>
+                    <button
+                      className={`${isActive ? "activeMenu" : ""} pb-1 relative cursor-pointer`}
+                      onClick={() => scrollToSection(namesSections)}>
                       {item.name}
-                    </NavLink>
+                    </button>
                   </li>
                 );
               })}
@@ -89,34 +104,19 @@ export default function Header() {
                   id="mobile-menu"
                   className="items-center justify-center md:hidden text-sm  gap-4 fancy-menu uppercase font-inter-bold uppercase text-black">
                   {menuItems.map((item, index) => {
-                    if (item.permalink === "#") {
-                      return (
-                        <li key={index}>
-                          <a
-                            href={item.permalink}
-                            className="font-inter-bold uppercase pb-1 relative">
-                            {item.name}
-                          </a>
-                        </li>
-                      );
-                    }
+                    let namesSections = item.name.toLowerCase();
                     let relativePath = new URL(item.permalink).pathname;
                     if (relativePath.includes("wp")) {
                       relativePath = relativePath.replace("/wp", "");
                     }
                     return (
-                      <li key={index}>
-                        <NavLink
-                          className={({ isActive }: { isActive: boolean }) =>
-                            `${
-                              isActive && window.location.pathname === relativePath ? "activeMenu" : ""
-                            } font-object-regular pb-1 relative `
-                          }
-                          to={relativePath}
-                          onClick={closeMenu}>
-                          {item.name}
-                        </NavLink>
-                      </li>
+                                              <li key={index}>
+                          <button
+                            className={`${isActive ? "activeMenu" : ""} pb-1 relative cursor-pointer`}
+                            onClick={() => scrollToSection(namesSections)}>
+                            {item.name}
+                          </button>
+                        </li>
                     );
                   })}
                 </ul>
