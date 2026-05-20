@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { getMenuInfo } from "../helpers/wp";
 import { type Menu } from "../types";
-import { NavLink } from "react-router";
 
 export default function Header() {
   const domain = import.meta.env.VITE_WP_DOMAIN;
@@ -22,20 +21,7 @@ export default function Header() {
     setMenuOpen(false);
   };
 
-    useEffect(() => {
-    const hash = window.location.hash.slice(1);
-    if (hash) {
-      setTimeout(() => {
-        const element = document.getElementById(hash);
-        if (element) {
-          element.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
-      }, 300);
-    }
-  }, [pathname]);
+
 
     const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -46,10 +32,7 @@ export default function Header() {
         block: "start",
       });
       closeMenu();
-    } else if (pathname !== "/") {
-      router.push(`/#${sectionId}`);
-      closeMenu();
-    }
+    } 
   };
 
   return (
@@ -81,7 +64,7 @@ export default function Header() {
                 return (
                   <li key={index}>
                     <button
-                      className={`${isActive ? "activeMenu" : ""} pb-1 relative cursor-pointer`}
+                      className={` pb-1 relative cursor-pointer`}
                       onClick={() => scrollToSection(namesSections)}>
                       {item.name}
                     </button>
@@ -112,7 +95,7 @@ export default function Header() {
                     return (
                                               <li key={index}>
                           <button
-                            className={`${isActive ? "activeMenu" : ""} pb-1 relative cursor-pointer`}
+                            className={` pb-1 relative cursor-pointer`}
                             onClick={() => scrollToSection(namesSections)}>
                             {item.name}
                           </button>
