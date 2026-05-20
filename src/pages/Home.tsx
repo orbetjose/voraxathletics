@@ -11,7 +11,8 @@ export default function Home() {
   return (
     <>
       <section className="relative">
-        <video className="absolute h-screen w-full object-cover" src={`${domain}wp-content/uploads/2026/05/Video_Vorax.mp4`} autoPlay loop muted></video>
+        <video className="absolute h-screen w-full object-cover hidden md:block" src={`${domain}wp-content/uploads/2026/05/Video_Vorax.mp4`} autoPlay loop muted playsInline></video>
+        <video className="absolute h-screen w-full object-cover md:hidden" src={`${domain}wp-content/uploads/2026/05/Reel_vorax.mp4`} autoPlay loop muted playsInline></video>
 
         <div className="h-screen w-full font-greyhound-bold text-white">
           <h1 className="hidden">Voraxathletics</h1>
