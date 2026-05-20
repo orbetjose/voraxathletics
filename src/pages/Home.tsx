@@ -91,7 +91,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative md:h-160 py-14 md:py-0 overflow-hidden" id="benefits">
+      <section id="benefits" className="relative md:h-160 py-14 md:py-0 overflow-hidden" >
         <img
           className="absolute left-1/2  md:h-160 md:left-10 3xl:left-60 hidden md:block"
           src={`${domain}wp-content/uploads/2026/05/logo-vorax-vertical.webp`}
