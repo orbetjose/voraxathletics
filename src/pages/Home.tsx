@@ -30,7 +30,7 @@ export default function Home() {
               <a
                 href="https://wa.me/message/NPBGN6T4QAEDO1"
                 className="">
-                (+52) 312 556 595
+                +1 (786) 928-6163
               </a>
             </div>
           </div>
@@ -43,7 +43,7 @@ export default function Home() {
           alt="Presentaciones de voraxathletics"
         />
         <h2 className="uppercase text-white font-greyhound-bold text-center z-1 relative pt-8 text-xl md:text-3xl">
-          Pre- Order here - New Colors
+          <a href="https://api.whatsapp.com/message/NPBGN6T4QAEDO1?autoload=1&app_absent=0">Pre - Order here</a> - New Colors
         </h2>
       </section>
       <section className="relative h-full md:h-[90vh] 3xl:h-[75vh] overflow-hidden">
