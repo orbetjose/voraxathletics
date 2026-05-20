@@ -55,7 +55,7 @@ export default function Header() {
               id="desktop-menu"
               className="items-center justify-center hidden text-sm 2xl:text-base md:flex gap-10 fancy-menu font-inter-bold uppercase text-white">
               {menuItems.map((item, index) => {
-                let namesSections = item.name.toLowerCase();
+                let namesSections = item.name.replace(" ", "-").toLowerCase();
                 if (item.permalink === "#") {
                   return (
                     <li key={index}>
@@ -75,7 +75,7 @@ export default function Header() {
                 return (
                   <li key={index}>
                     <button
-                      className={` pb-1 relative cursor-pointer`}
+                      className={` pb-1 relative cursor-pointer uppercase`}
                       onClick={() => scrollToSection(namesSections)}>
                       {item.name}
                     </button>
@@ -98,7 +98,7 @@ export default function Header() {
                   id="mobile-menu"
                   className="items-center justify-center md:hidden text-sm  gap-4 fancy-menu uppercase font-inter-bold uppercase text-black">
                   {menuItems.map((item, index) => {
-                    let namesSections = item.name.toLowerCase();
+                let namesSections = item.name.replace(" ", "-").toLowerCase();
                     if (item.permalink === "#") {
                       return (
                         <li key={index}>
@@ -116,7 +116,7 @@ export default function Header() {
                     return (
                       <li key={index}>
                         <button
-                          className={` pb-1 relative cursor-pointer`}
+                          className={` pb-1 relative cursor-pointer uppercase`}
                           onClick={() => scrollToSection(namesSections)}>
                           {item.name}
                         </button>
