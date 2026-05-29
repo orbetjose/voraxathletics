@@ -18,7 +18,7 @@ export default function Home() {
           <h1 className="hidden">Voraxathletics</h1>
           <div className="flex flex-col md:items-start items-center gap-6 absolute md:bottom-15 md:right-40 bottom-10 right-1/2 translate-x-1/2 md:translate-x-0 3xl:bottom-40 3xl:right-60">
             <a
-              href="https://wa.me/message/NPBGN6T4QAEDO1"
+              href="https://wa.me/p/24996484726715391/17869286163"
               className="uppercase text-primary-gray px-5 py-1 bg-white rounded-full w-fit transition-colors duration-300 hover:bg-primary-gray hover:text-white">
               Buy now
             </a>
@@ -29,7 +29,7 @@ export default function Home() {
                 className="h-8"
               />
               <a
-                href="https://wa.me/message/NPBGN6T4QAEDO1"
+                href="https://wa.me/p/24996484726715391/17869286163"
                 className="">
                 +1 (786) 928-6163
               </a>
@@ -72,7 +72,7 @@ export default function Home() {
               32oz stainless steel water bottle designed to keep up with your
             </p>
             <a
-              href="https://wa.me/message/NPBGN6T4QAEDO1"
+              href="https://wa.me/p/24996484726715391/17869286163"
               className="text-primary-green px-4 py-1 rounded-full bg-white font-greyhound-bold uppercase text-sm hover:bg-primary-green hover:text-white transition-colors duration-300"
               data-aos="fade">
               Get Yours Now
@@ -293,7 +293,7 @@ export default function Home() {
               Take your favorite drink everywhere in style and comfort.
             </p>
             <a
-              href="https://wa.me/message/NPBGN6T4QAEDO1"
+              href="https://wa.me/p/24996484726715391/17869286163"
               className="text-primary-gray px-4 py-1 rounded-full bg-white font-greyhound-bold uppercase text-sm hover:bg-primary-gray hover:text-white transition-colors duration-300"
               data-aos="fade">
               Shop now
