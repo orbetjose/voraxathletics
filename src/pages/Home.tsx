@@ -44,7 +44,7 @@ export default function Home() {
           alt="Presentaciones de voraxathletics"
         />
         <h2 className="uppercase text-white font-greyhound-bold text-center z-1 relative pt-8 text-xl md:text-3xl">
-          <a href="https://api.whatsapp.com/message/NPBGN6T4QAEDO1?autoload=1&app_absent=0">Pre - Order here</a> - New Colors
+          <a href="https://wa.me/p/24996484726715391/17869286163" className="underline">Pre - Order here</a> - New Colors
         </h2>
       </section>
       <section className="relative h-full md:h-[90vh] 3xl:h-[75vh] overflow-hidden">
